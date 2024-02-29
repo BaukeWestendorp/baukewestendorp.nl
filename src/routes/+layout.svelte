@@ -1,6 +1,11 @@
 <script lang="ts">
 	import '$lib/style.css';
 	import { page } from '$app/stores';
+	import { inject } from '@vercel/analytics';
+	import { onMount } from 'svelte';
+	onMount(() => {
+		inject();
+	});
 </script>
 
 <header>
