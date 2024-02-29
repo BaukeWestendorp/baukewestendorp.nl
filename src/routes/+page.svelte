@@ -36,10 +36,9 @@
 				aan de <i>Hanzehogeschool</i>
 				(<a
 					href="https://www.hanze.nl/nl/opleidingen/voltijd/bachelor/communication-and-multimedia-design"
-				>
-					"oh ja leuk zeg! En wat doe je bij die studie dan precies?"
-				</a>) woon ik mijn inmiddels favoriete stad Groningen. Ik kan me onvoorwaardelijk vermaken
-				met muziek, foto, video, kunst en programmeren met een mespuntje sambal.
+					>"oh ja leuk zeg! En wat doe je bij die studie dan precies?"</a
+				>) woon ik mijn inmiddels favoriete stad Groningen. Ik kan me onvoorwaardelijk vermaken met
+				muziek, foto, video, kunst en programmeren met een mespuntje sambal.
 			</p>
 			<br />
 			<a href="/portret" class="button">Bekijk mijn werk</a>
