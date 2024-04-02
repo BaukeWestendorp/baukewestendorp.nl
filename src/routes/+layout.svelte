@@ -59,6 +59,11 @@
 		padding: 2rem;
 	}
 
+	footer {
+		border-top: 1px solid var(--c-accent);
+		padding: 1.5rem 2rem;
+	}
+
 	header,
 	main,
 	footer {
@@ -66,11 +71,6 @@
 		max-width: var(--max-page-width);
 		margin: 0 auto;
 		box-sizing: border-box;
-	}
-
-	footer {
-		border-top: 1px solid var(--c-accent);
-		padding: 1.5rem 2rem;
 	}
 
 	:global(body) {

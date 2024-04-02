@@ -106,13 +106,6 @@
 			gap: 1rem;
 		}
 
-		.about picture {
-			margin: 0 auto;
-			width: 100%;
-			height: 100%;
-			max-width: 24rem;
-		}
-
 		.bauke {
 			width: 100%;
 			height: 100%;
