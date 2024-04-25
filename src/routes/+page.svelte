@@ -20,6 +20,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Home</title>
+</svelte:head>
+
 <div class="page">
 	<section class="about">
 		<enhanced:img
@@ -41,7 +45,7 @@
 				muziek, foto, video, kunst en programmeren met een mespuntje sambal.
 			</p>
 			<br />
-			<a href="/portret" class="button">Bekijk mijn werk</a>
+			<a href="/fotografie" class="button">Bekijk mijn werk</a>
 		</div>
 	</section>
 

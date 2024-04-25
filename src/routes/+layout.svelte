@@ -11,7 +11,8 @@
 <header>
 	<a href="/"><h1>bauke westendorp.</h1></a>
 	<nav>
-		<a class:active={$page.url.pathname.startsWith('/portret')} href="/fotografie">fotografie</a>
+		<a class:active={$page.url.pathname.startsWith('/projecten')} href="/projecten">projecten</a>
+		<a class:active={$page.url.pathname.startsWith('/fotografie')} href="/fotografie">fotografie</a>
 	</nav>
 </header>
 
