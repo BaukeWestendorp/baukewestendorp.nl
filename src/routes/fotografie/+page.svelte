@@ -2,4 +2,4 @@
 	import ImageGrid from '$lib/components/ImageGrid.svelte';
 </script>
 
-<ImageGrid folder="street" alt="Straat" />
+<ImageGrid folder="photos" alt="Photos" />

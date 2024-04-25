@@ -1,27 +1,9 @@
 <script lang="ts">
-	export let folder: 'band' | 'portret' | 'street' | 'sport';
+	export let folder: 'photos';
 	export let alt: string;
 
 	const allImageModules = {
-		band: import.meta.glob('$lib/img/band/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp}', {
-			query: {
-				enhanced: true
-			},
-			eager: true
-		}),
-		portret: import.meta.glob('$lib/img/portret/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp}', {
-			query: {
-				enhanced: true
-			},
-			eager: true
-		}),
-		street: import.meta.glob('$lib/img/street/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp}', {
-			query: {
-				enhanced: true
-			},
-			eager: true
-		}),
-		sport: import.meta.glob('$lib/img/sport/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp}', {
+		photos: import.meta.glob('$lib/img/photos/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp}', {
 			query: {
 				enhanced: true
 			},
