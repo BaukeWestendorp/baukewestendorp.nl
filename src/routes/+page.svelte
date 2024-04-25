@@ -68,7 +68,8 @@
 
 <style>
 	:global(main, header, footer) {
-		padding: 2rem !important;
+		padding-left: 2rem !important;
+		padding-right: 2rem !important;
 	}
 
 	.page {

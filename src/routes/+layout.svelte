@@ -22,6 +22,11 @@
 
 <footer>
 	<p class="copyright">© 2024 Bauke Westendorp</p>
+
+	<div class="media">
+		<a href="https://github.com/BaukeWestendorp">GitHub</a>
+		<a rel="me" href="https://hachyderm.io/@orkapoes">Mastodon</a>
+	</div>
 </footer>
 
 <style>
@@ -59,7 +64,17 @@
 
 	footer {
 		border-top: 1px solid var(--c-accent);
-		padding: 1.5rem 2rem;
+		padding: 1rem;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	footer .media {
+		display: flex;
+		flex-direction: column;
+		text-align: right;
 	}
 
 	header,
