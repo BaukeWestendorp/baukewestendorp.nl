@@ -7,6 +7,20 @@
 
 <article>
 	<h1>Projecten</h1>
+
+	<section>
+		<div class="header">
+			<h2>Allround Portraits</h2>
+			<div class="timespan">Jul 2024 - Heden</div>
+		</div>
+		<p>
+			Bij <a href="https://allroundportraits.nl">Allround Portraits</a>
+			combineren we onze liefde voor fotografie met op maat gemaakte pakketten. We staan dagelijks klaar
+			om de mooiste momenten vast te leggen. Ben jij op zoek naar nieuwe portretfoto's, pasfoto's of
+			leuke plaatjes met je partner, hond of familie. Dan ben je bij ons aan het juiste adres.
+		</p>
+	</section>
+
 	<section>
 		<div class="header">
 			<h2>Radiant</h2>
