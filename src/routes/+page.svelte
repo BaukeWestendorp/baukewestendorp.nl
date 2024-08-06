@@ -2,6 +2,7 @@
 	interface ContactInformation {
 		phone: string;
 		email: string;
+		kvk: string;
 	}
 
 	let contactInformationShown = false;
@@ -12,10 +13,13 @@
 		const phonePart2 = '3897779';
 		const emailPart1 = 'baukew';
 		const emailPart2 = 'estendorp@gmail.com';
+		const kvkPart1 = '9463';
+		const kvkPart2 = '3592';
 
 		return {
 			phone: phonePart1 + phonePart2,
-			email: emailPart1 + emailPart2
+			email: emailPart1 + emailPart2,
+			kvk: kvkPart1 + kvkPart2
 		};
 	}
 </script>
@@ -41,8 +45,8 @@
 				(<a
 					href="https://www.hanze.nl/nl/opleidingen/voltijd/bachelor/communication-and-multimedia-design"
 					>"oh ja leuk zeg! En wat doe je bij die studie dan precies?"</a
-				>) woon ik mijn inmiddels favoriete stad Groningen. Ik kan me onvoorwaardelijk vermaken met
-				muziek, foto, video, kunst en programmeren met een mespuntje sambal.
+				>) woon ik in mijn inmiddels favoriete stad Groningen. Ik kan me onvoorwaardelijk vermaken
+				met muziek, foto, video, kunst en programmeren met een mespuntje sambal.
 			</p>
 			<br />
 			<a href="/fotografie" class="button">Bekijk mijn werk</a>
@@ -59,6 +63,9 @@
 				<br />
 				<b>Email:</b>
 				<a href={`mailto:${getContactInformation().email}`}>{getContactInformation().email}</a>
+				<br />
+				<b>KvK nummer:</b>
+				{getContactInformation().kvk} (Westendorp AV)
 			</p>
 		{:else}
 			<button on:click={showContactInformation}>Toon contactinformatie</button>
