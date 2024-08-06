@@ -25,7 +25,15 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Home | Bauke Westendorp</title>
+	<meta
+		name="description"
+		content="Op de homepagina van Bauke Westendorp uit Groningen
+        lees je over zijn studies Communication & Multimedia Design en HBO-ICT.
+        Hij kan zich onvoorwaardelijk vermaken
+        met muziek, fotografie, video, kunst en programmeren.
+        Ook vind je hier de contactinformatie voor makkelijk contact."
+	/>
 </svelte:head>
 
 <div class="page">
@@ -46,7 +54,7 @@
 					href="https://www.hanze.nl/nl/opleidingen/voltijd/bachelor/communication-and-multimedia-design"
 					>"oh ja leuk zeg! En wat doe je bij die studie dan precies?"</a
 				>) woon ik in mijn inmiddels favoriete stad Groningen. Ik kan me onvoorwaardelijk vermaken
-				met muziek, foto, video, kunst en programmeren met een mespuntje sambal.
+				met muziek, fotografie, videografie, kunst en programmeren met een mespuntje sambal.
 			</p>
 			<br />
 			<a href="/fotografie" class="button">Bekijk mijn werk</a>

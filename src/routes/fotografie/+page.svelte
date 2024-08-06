@@ -3,7 +3,13 @@
 </script>
 
 <svelte:head>
-	<title>Fotografie</title>
+	<title>Fotografie | Bauke Westendorp</title>
+	<meta
+		name="description"
+		content="Bauke Westendorp's portfolio pagina met zijn werk als fotograaf.
+        Foto's van architectuur tot portretten,
+        bandfoto's tot natuur. Alles zit er tussen."
+	/>
 </svelte:head>
 
 <article>

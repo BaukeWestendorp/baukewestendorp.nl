@@ -2,7 +2,12 @@
 </script>
 
 <svelte:head>
-	<title>Projecten</title>
+	<title>Projecten | Bauke Westendorp</title>
+	<meta
+		name="description"
+		content="Bauke Westendorp werkt mee aan meerdere projecten zoals
+        Allround Portraits, Radiant, Linkage en Impossible Robotics."
+	/>
 </svelte:head>
 
 <article>
