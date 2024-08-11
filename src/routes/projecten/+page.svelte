@@ -16,7 +16,6 @@
 	<section>
 		<div class="header">
 			<h2>Allround Portraits</h2>
-			<div class="timespan">Jul 2024 - Heden</div>
 		</div>
 		<p>
 			Bij <a href="https://allroundportraits.nl">Allround Portraits</a>
@@ -29,7 +28,7 @@
 	<section>
 		<div class="header">
 			<h2>Radiant</h2>
-			<div class="timespan">Jan 2024 - Heden</div>
+			<div class="timespan">Januari 2024 - Heden</div>
 		</div>
 		<p>
 			<a href="https://github.com/BaukeWestendorp/radiant">Radiant</a> is software voor het designen
