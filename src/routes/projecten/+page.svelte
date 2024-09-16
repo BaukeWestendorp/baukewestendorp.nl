@@ -1,5 +1,6 @@
 <script lang="ts">
-	import hetDagboekImage from '$lib/img/photos/het_dagboek.jpg';
+	import hetDagboekImage from '$lib/img/projects/het_dagboek.jpg';
+	import impossibleRoboticsImage from '$lib/img/projects/impossible_robotics.jpg';
 </script>
 
 <svelte:head>
@@ -73,6 +74,7 @@
 		<div class="header">
 			<h2>Impossible Robotics</h2>
 		</div>
+		<img src={impossibleRoboticsImage} alt="Impossible Robotics" />
 		<p>
 			<a href="https://impossiblerobotics.nl">Impossible Robotics</a> is een
 			<a href="https://www.firstinspires.org/robotics/frc">FRC</a>,
