@@ -1,4 +1,5 @@
 <script lang="ts">
+	import hetDagboekImage from '$lib/img/photos/het_dagboek.jpg';
 </script>
 
 <svelte:head>
@@ -12,6 +13,25 @@
 
 <article>
 	<h1>Projecten</h1>
+
+	<section>
+		<div class="header">
+			<h2>Het Dagboek</h2>
+		</div>
+		<img src={hetDagboekImage} alt="Allround Portraits" />
+		<p>
+			Ter ere van de 80e herdenking van de Slag om Arnhem heeft Stichting Verscholen Verhalen een
+			meeslepende filmtheatervoorstelling ontwikkeld genaamd “Het Dagboek”.
+		</p>
+		<p>
+			Voor dit project heb ik op de draaidagen van de filmscènes portretfoto's van alle acteurs én
+			behind the scenes foto's gemaakt.
+		</p>
+		<p>
+			Meer informatie:
+			<a href="https://www.filmtheatervoorstelling.nl">www.filmtheatervoorstelling.nl</a>
+		</p>
+	</section>
 
 	<section>
 		<div class="header">
@@ -74,6 +94,13 @@
 	section {
 		max-width: 42rem;
 		margin-bottom: 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	section img {
+		width: 100%;
 	}
 
 	section:last-child {
@@ -86,11 +113,5 @@
 		align-items: center;
 
 		border-bottom: 1px solid var(--c-accent-secondary);
-		margin-bottom: 1rem;
-	}
-
-	.timespan {
-		font-size: 0.8rem;
-		color: var(--c-text-secondary);
 	}
 </style>
