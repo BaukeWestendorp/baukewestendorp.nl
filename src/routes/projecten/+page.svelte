@@ -28,7 +28,6 @@
 	<section>
 		<div class="header">
 			<h2>Radiant</h2>
-			<div class="timespan">Januari 2024 - Heden</div>
 		</div>
 		<p>
 			<a href="https://github.com/BaukeWestendorp/radiant">Radiant</a> is software voor het designen
@@ -40,7 +39,6 @@
 	<section>
 		<div class="header">
 			<h2>Linkage</h2>
-			<div class="timespan">Maart 2023 - Heden</div>
 		</div>
 		<p>
 			<a href="https://github.com/Impossible-Robotics-5412/linkage">Linkage</a> is een experimenteel
@@ -54,7 +52,6 @@
 	<section>
 		<div class="header">
 			<h2>Impossible Robotics</h2>
-			<div class="timespan">Januari 2019 - Heden</div>
 		</div>
 		<p>
 			<a href="https://impossiblerobotics.nl">Impossible Robotics</a> is een
