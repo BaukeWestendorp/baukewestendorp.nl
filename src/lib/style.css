@@ -108,3 +108,7 @@ button:hover {
 	background-size: 400%;
 	animation: loading 1.5s ease-in-out infinite;
 }
+
+img {
+	border-radius: 3px;
+}
