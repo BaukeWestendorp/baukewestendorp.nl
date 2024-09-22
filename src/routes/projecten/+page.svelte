@@ -19,7 +19,7 @@
 		<div class="header">
 			<h2>Het Dagboek</h2>
 		</div>
-		<img src={hetDagboekImage} alt="Allround Portraits" />
+		<img src={hetDagboekImage} alt="Het Dagboek" />
 		<p>
 			Ter ere van de 80e herdenking van de Slag om Arnhem heeft Stichting Verscholen Verhalen een
 			meeslepende filmtheatervoorstelling ontwikkeld genaamd “Het Dagboek”.
