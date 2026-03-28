@@ -1,0 +1,175 @@
+body {
+    margin: 0 1rem;
+}
+
+main {
+    width: 100%;
+    max-width: var(--max-page-width);
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    max-width: var(--max-page-width);
+    margin: 0 auto;
+    padding: 1rem;
+    border-bottom: 1px solid var(--healthy-green);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    gap: 1rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: var(--max-page-width);
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 0.5rem;
+    border-top: 1px solid var(--healthy-green);
+}
+
+footer .info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer sub {
+    text-align: center;
+}
+
+#contact {
+    padding-bottom: 1rem;
+}
+
+#contact ul {
+    margin: 0;
+}
+
+#projects .section {
+    margin: 0 1rem;
+}
+
+#projects .section .header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#projects .section .title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tag {
+    padding: 0 0.25rem;
+    color: var(--gross-orange);
+    border: 1px solid var(--questionable-orange);
+    border-radius: 3px;
+    font-style: italic;
+}
+
+#education .sections {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#education .section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(4rem, 1fr) min-content 4fr;
+    gap: 1rem;
+}
+
+#education .section .title {
+    font-family: var(--f-header);
+    font-size: 1.1rem;
+}
+
+#education .section .time {
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+
+    text-align: right;
+}
+
+#education .section .dot-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+}
+
+#education .section .dot {
+    --size: 0.5rem;
+    width: var(--size);
+    height: var(--size);
+
+    margin: calc((1rem - var(--size)));
+    border-radius: 50%;
+    background-color: var(--text-primary);
+    flex-grow: 0;
+}
+
+#education .section .line {
+    flex: 1 1 auto;
+    margin: 8px 0;
+    width: 1px;
+    background-color: var(--text-secondary);
+}
+
+#webring {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: last baseline;
+
+    font-size: 0.9em;
+    text-align: center;
+}
+
+@media screen and (width <= 700px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    footer .info {
+        flex-direction: column;
+    }
+}
+
+@media screen and (width <= 500px) {
+    header {
+        flex-direction: column;
+    }
+
+    header h1 {
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}

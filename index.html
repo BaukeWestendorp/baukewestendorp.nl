@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/style/normalize.css" />
+        <link rel="stylesheet" href="/style/global.css" />
+        <link rel="stylesheet" href="/style/index.css" />
+        <title>Home - Bauke Westendorp</title>
+
+        <script>
+            function getContactInformation() {
+                const phonePart1 = "+3165";
+                const phonePart2 = "3897779";
+                const emailPart1 = "baukew";
+                const emailPart2 = "estendorp@gmail.com";
+                const kvkPart1 = "9463";
+                const kvkPart2 = "3592";
+
+                return {
+                    phone: phonePart1 + phonePart2,
+                    email: emailPart1 + emailPart2,
+                    kvk: kvkPart1 + kvkPart2,
+                };
+            }
+
+            function showContactDetails() {
+                const { phone, email, kvk } = getContactInformation();
+
+                const contactEl = document.getElementById("contact");
+                if (!contactEl) return;
+
+                contactEl.innerHTML = `
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>
+                            <strong>Email:</strong>
+                            <a href="mailto:${email}">${email}</a>
+                        </li>
+                        <li>
+                            <strong>Phone:</strong>
+                            <a href="tel:${phone}">${phone}</a>
+                        </li>
+                        <li>
+                            <strong>KvK:</strong> <span>${kvk}</span>
+                        </li>
+                    </ul>
+                `;
+
+                const buttonEl = document.getElementById(
+                    "show-contact-details",
+                );
+                if (buttonEl) buttonEl.remove();
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Bauke Westendorp</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#education">education</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="about" class="text-and-image">
+                <div>
+                    <h2>About</h2>
+                    <p>
+                        Hi, I’m Bauke. I build lighting control software in
+                        <a href="https://rust-lang.org">Rust</a>, fueled by
+                        years of experience as an AV technician and a lifelong
+                        passion for coding.
+                        <br />
+                        I live in the beautiful city of Groningen, where I'm
+                        studying
+                        <a
+                            href="https://www.hanze.nl/nl/opleidingen/voltijd/bachelor/ict/richt-je-eigen-studie-in/software-engineering"
+                            >ICT, majoring in Software Engineering</a
+                        >
+                        at Hanze.
+                    </p>
+
+                    <button
+                        id="show-contact-details"
+                        type="button"
+                        onclick="showContactDetails()"
+                    >
+                        Show contact details
+                    </button>
+
+                    <div id="contact"></div>
+                </div>
+
+                <div class="img-container">
+                    <img
+                        src="/media/img/profile.jpeg"
+                        alt="Portrait of Bauke Westendorp"
+                    />
+                    <sub>
+                        figure 1 &RightAngleBracket; Bauke in
+                        <a href="https://dwangschematiek.nl">Marieke</a>'s
+                        office.
+                    </sub>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <p>
+                    Over the years I've been working on tons of programming
+                    projects, but these are some of the highlights that I've
+                    been working on recently.
+                </p>
+
+                <div class="sections">
+                    <div class="section">
+                        <div class="header">
+                            <div class="title">
+                                <h3>Zeevonk</h3>
+                                <span
+                                    >(<a
+                                        href="https://github.com/BaukeWestendorp/zeevonk"
+                                        >github</a
+                                    >,
+                                    <a href="https://crates.io/crates/zeevonk"
+                                        >crates.io</a
+                                    >)</span
+                                >
+                            </div>
+                            <div class="tags">
+                                <span class="tag">Rust</span>
+                                <span class="tag">Lighting</span>
+                                <span class="tag">DMX</span>
+                                <span class="tag">MVR/GDTF</span>
+                            </div>
+                        </div>
+                        <p>
+                            Zeevonk is a modular system for controlling lighting
+                            fixtures. This project is the result of a deep
+                            rabbit hole I went into, when creating
+                            <a href="https://github.com/BaukeWestendorp/Radiant"
+                                >Radiant</a
+                            >. I realized I was writing the same DMX resolvers
+                            for
+                            <a
+                                href="https://www.gdtf.eu/gdtf/prologue/introduction/"
+                                >GDTF</a
+                            >
+                            files over and over again. Zeevonk is my way of
+                            consolidating all of my research into a hub for DMX
+                            lighting.
+                        </p>
+                    </div>
+                    <div class="section">
+                        <div class="header">
+                            <div class="title">
+                                <h3>Radiant</h3>
+                                <span
+                                    >(<a
+                                        href="https://github.com/BaukeWestendorp/radiant"
+                                        >github</a
+                                    >)</span
+                                >
+                            </div>
+                            <div class="tags">
+                                <span class="tag">Rust</span>
+                                <span class="tag">Lighting</span>
+                            </div>
+                        </div>
+                        <p>
+                            An experimental, node-graph based lighting control
+                            system written in Rust using
+                            <a href="https://www.gpui.rs/">GPUI</a>. Radiant's
+                            primary mechanism for generating effects are
+                            node-graphs. A node-graph can be run on a fixture
+                            group, processing the graph (with some context) for
+                            each fixture in that group. In more recent versions
+                            of Radiant, the node system has been removed,
+                            because I want to make sure the fundamental
+                            structure of the software (think attribute
+                            processing, patches, etc.) is in place before
+                            working on actually generating dynamic effects.
+                        </p>
+                    </div>
+                    <div class="section">
+                        <div class="header">
+                            <div class="title">
+                                <h3>mvr-gdtf</h3>
+                                <span
+                                    >(<a
+                                        href="https://github.com/BaukeWestendorp/mvr-gdtf"
+                                        >github</a
+                                    >)</span
+                                >
+                            </div>
+                            <div class="tags">
+                                <span class="tag">Rust</span>
+                                <span class="tag">MVR/GDTF</span>
+                            </div>
+                        </div>
+                        <p>
+                            <a
+                                href="https://www.gdtf.eu/mvr/prologue/introduction/"
+                                >MVR</a
+                            >
+                            (My Virtual Rig) and
+                            <a
+                                href="https://www.gdtf.eu/gdtf/prologue/introduction/"
+                                >GDTF</a
+                            >
+                            (General Device Type Format) are open standards used
+                            to describe lighting rigs and fixtures in
+                            entertainment production. While MVR files contain
+                            scene and rig data, GDTF files define the specific
+                            characteristics and geometry of individual fixtures.
+                            Because these formats support thousands of devices
+                            across multiple manufacturers, their data structures
+                            are large and rely heavily on optional fields. This
+                            means it's non-trivial to read commonly used data
+                            like the channel count of a fixture's DMX mode. This
+                            often makes directly reading the structures verbose
+                            and difficult to manage. <em>mvr-gdtf</em> abstracts
+                            this complexity by providing lookup tables and
+                            high-level helper functions. The goal is to let you
+                            extract the data you actually need without
+                            navigating the deep, nested specifications of the
+                            underlying XML. Though, if you want to manually find
+                            anything defined in the description files, you can.
+                        </p>
+                    </div>
+                    <div class="section small-projects">
+                        <h3>Smaller but still good projects</h3>
+                        <p>
+                            This is a collection of some cool other
+                            projects/libraries I've created.
+                        </p>
+                        <div class="section">
+                            <div class="header">
+                                <div class="title">
+                                    <h4>theymx</h4>
+                                    <span
+                                        >(<a
+                                            href="https://github.com/BaukeWestendorp/theymx"
+                                            >github</a
+                                        >,
+                                        <a
+                                            href="https://crates.io/crates/theymx"
+                                            >crates.io</a
+                                        >)</span
+                                    >
+                                </div>
+                                <div class="tags">
+                                    <span class="tag">Rust</span>
+                                </div>
+                            </div>
+                            <p>
+                                This is a small crate for working with DMX
+                                concepts like addresses, channels, universes and
+                                values.
+                                <br />
+                                It started out as a few internal modules for
+                                some of my other projects like
+                                <a
+                                    href="https://github.com/BaukeWestendorp/zeevonk"
+                                    >zeevonk</a
+                                >
+                                and
+                                <a
+                                    href="https://github.com/BaukeWestendorp/radiant"
+                                    >radiant</a
+                                >. I thought I'd share it with the world as it
+                                has been very useful for me.
+                            </p>
+                        </div>
+                        <div class="section">
+                            <div class="header">
+                                <div class="title">
+                                    <h4>bmdse</h4>
+                                    <span
+                                        >(<a
+                                            href="https://github.com/BaukeWestendorp/bmdse"
+                                            >github</a
+                                        >,
+                                        <a href="https://crates.io/crates/bmdse"
+                                            >crates.io</a
+                                        >)</span
+                                    >
+                                </div>
+                                <div class="tags">
+                                    <span class="tag">Rust</span>
+                                    <span class="tag">HID</span>
+                                </div>
+                            </div>
+
+                            <div class="text-and-image">
+                                <p>
+                                    An interface for talking with a Black Magic
+                                    Design Speed Editor using the HID API,
+                                    written in Rust.
+                                    <br />
+                                    This library was created because I was
+                                    missing MIDI functionality for the Speed
+                                    Editor, when experimenting with controllers
+                                    for my other project
+                                    <a
+                                        href="https://github.com/BaukeWestendorp/zeevonk"
+                                        >zeevonk</a
+                                    >. I ended up writing this high-level API,
+                                    with an internal low(er)-level driver, as I
+                                    did not want to constantly manage another
+                                    thread for the event polling in each of my
+                                    small testing-purpose applications.
+                                </p>
+                                <div class="img-container">
+                                    <img
+                                        src="/media/img/bmdse.jpg"
+                                        alt="Julius sitting next to a Speed Editor"
+                                    />
+                                    <sub>
+                                        figure 2 &RightAngleBracket; Julius
+                                        sitting next to a Speed Editor.
+                                    </sub>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="header">
+                                <div class="title">
+                                    <h4>linkage</h4>
+                                    <span
+                                        >(<a
+                                            href="https://github.com/Impossible-Robotics-5412/linkage"
+                                            >github</a
+                                        >)</span
+                                    >
+                                </div>
+                                <div class="tags">
+                                    <span class="tag">Rust</span>
+                                    <span class="tag">Svelte</span>
+                                    <span class="tag">FRC</span>
+                                </div>
+                            </div>
+                            <p>
+                                Linkage is an experimental Robot Control System
+                                designed to make programming robots easy and
+                                accessible. It was initially created to replace
+                                the overpriced hardware for
+                                <a
+                                    href="https://www.firstinspires.org/robotics/frc"
+                                    >FRC</a
+                                >
+                                competitions for off-season events, so the
+                                expensive hardware could be re-used for that
+                                year's new robot.
+                            </p>
+                        </div>
+                        <div class="section">
+                            <div class="header">
+                                <div class="title">
+                                    <h4>west</h4>
+                                    <span
+                                        >(<a
+                                            href="https://github.com/BaukeWestendorp/west"
+                                            >github</a
+                                        >)</span
+                                    >
+                                </div>
+                                <div class="tags">
+                                    <span class="tag">Rust</span>
+                                    <span class="tag">Language</span>
+                                    <span class="tag">Joke(ish)</span>
+                                </div>
+                            </div>
+                            <p>
+                                West is an experimental joke(ish) programming
+                                language meant for me to learn how they work.
+                                Yes this probably will suck but wait until I
+                                make the new overhyped language (Not talking
+                                about you Rust, I'll love you forever &lt3).
+                                <br />
+                                This is the new <em>Bau</em>, for those that are
+                                familiar (you will not be familiar with
+                                <em>Bau</em>.)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <p>This is a timeline of my educational background.</p>
+                <div class="sections">
+                    <div class="section">
+                        <div class="time title">present - 2024</div>
+                        <div class="dot-line">
+                            <div class="dot"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                ICT (major Software Engineering) @ Hanze
+                            </div>
+                            <p>
+                                Currently I'm studying Software Engineering at
+                                Hanze in Groningen.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="time title">2024</div>
+                        <div class="dot-line">
+                            <div class="dot"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                Propedeuse Communicatie & Multimedia Design @
+                                Hanze
+                            </div>
+                            <p>
+                                In 2024 I completed the first year of CMD. After
+                                receiving my propaedeutic diploma, I decided to
+                                move to ICT.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="time title">2022</div>
+                        <div class="dot-line">
+                            <div class="dot"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="info">
+                            <div class="title">HAVO Diploma</div>
+                            <p>
+                                When Covid-19 hit, I decided to simply graduate
+                                for HAVO, because of the
+                                <em>mediocre</em> education during that time.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="time title">2020 - 2015</div>
+                        <div class="dot-line">
+                            <div class="dot"></div>
+                        </div>
+                        <div class="info">
+                            <div class="title">VWO 1 - 5</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="webring">
+                <span>↼ <a href="http://stupidplusplus.com/">puk</a></span>
+                <p>
+                    this site is a part of the<br />
+                    ♡
+                    <a
+                        href="https://webring.dwangschematiek.nl/"
+                        target="_blank"
+                        >dwangschematiek webring</a
+                    >
+                    ♡
+                </p>
+                <span><a href="https://dwangschematiek.nl">ma3ke</a> ⇀</span>
+            </div>
+        </main>
+
+        <footer>
+            <div class="info">
+                <div>&copy; Bauke Westendorp 2026</div>
+
+                <div>
+                    <a href="https://github.com/BaukeWestendorp">GitHub</a>
+                    |
+                    <a href="https://www.instagram.com/bauke_west/"
+                        >Instagram</a
+                    >
+                </div>
+            </div>
+            <sub>
+                this site was written using ancient but good web technology.
+                read the source code
+                <a href="https://github.com/BaukeWestendorp/baukewestendorp.nl"
+                    >here</a
+                >.
+            </sub>
+        </footer>
+    </body>
+</html>

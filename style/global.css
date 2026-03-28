@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap");
+
+:root {
+    --beige: #f2efe3;
+    --gross-orange: #755015;
+    --questionable-orange: #d89529;
+    --healthy-green: #5c7a26;
+    --healthy-green-hover: #a4c568;
+    --text-primary: #000000;
+    --text-secondary: #606060;
+    --text-inverted: #ffffff;
+
+    --f-header: "Noto Serif", serif;
+    --f-serif: "New Times Roman", serif;
+
+    --max-page-width: 64rem;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--text-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: var(--f-header);
+}
+
+html,
+body {
+    background: var(--beige);
+}
+
+button {
+    padding: 0.25rem 0.5rem;
+    border: 2px solid #0004;
+    border-radius: 3px;
+    background: var(--healthy-green);
+    color: var(--text-inverted);
+    cursor: pointer;
+    user-select: none;
+}
+
+button:hover {
+    background: var(--healthy-green-hover);
+}
+
+a {
+    color: var(--healthy-green);
+}
+
+a:hover {
+    color: var(--healthy-green-hover);
+}
+
+sub {
+    font-style: italic;
+    font-size: 0.9em;
+    line-height: initial;
+    color: var(--text-secondary);
+}
+
+img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+section {
+    padding: 1rem;
+    padding-bottom: 0rem;
+}
+
+section:last-child {
+    padding-bottom: 1rem;
+}
+
+.text-and-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.text-and-image .img-container {
+    width: 100%;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+@media screen and (width <= 700px) {
+    .text-and-image {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+}
